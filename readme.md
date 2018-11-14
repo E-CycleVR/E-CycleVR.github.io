@@ -1,12 +1,8 @@
-###E-CycleVR
+## E-Cycle VR
 
-<<fill in>>
+## Overview
 
-###Overview
-
-<<fill in>>
-
-### Installation
-Requisites are: 
-1. Chrome Web browser (Optimised) For WebVR view / Mobile Phone, URL: e-cycle-vr.github.io
+## Installation 
+Requisites are:
+1. Chrome Web browser (Optimised) For WebVR view / Mobile Phone, URL: e-cycle-vr.github.io\
 2. Enjoy
