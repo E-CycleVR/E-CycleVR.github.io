@@ -59,22 +59,40 @@
 		display: block;
       }
 
-	   #about p:last-child{
+	   #about #about2 p:last-child{
         margin: 0;
       }
 
-	  #about b{
+	  #about #about2 b{
           font-weight: bold;
           font-family: monospace;
       }
 
 	  @media (max-width: 400px), (max-height: 300px) {
-      #about {
+      #about #about2 {
         left: 5%;
         top: 5%;
         width: 90%;
       }
 	  }
+
+    #about2 {
+        display: none;
+        position: absolute;
+        z-index: 7001;
+        width: 300px;
+        top: 40px;
+        right: 40px;
+        font: 14px 'Voces', Arial, sans-serif;
+        color: white;
+        line-height: 1.3rem;
+        background: rgba(0,0,0,0.2);
+        padding: 1rem;
+        box-sizing: border-box;
+    display: block;
+
+      }
+
 </style>
 
 </head>
@@ -83,6 +101,14 @@
 
   <b>Your score: 0</b>
   <p>Mistakes made: None</p>
+  <p id ="test"></p>
+
+ </div>
+
+ <body>
+<div id="about2">
+
+  <p id ="test"></p>
 
  </div>
 <script>
@@ -197,6 +223,36 @@
 <a-box position="-35.945 5.639 -23.582" src="#building" depth="400" height="150" width="0.5" scale="0.1 0.1 0.1" rotation="0 90 0"></a-box>
 
 </a-scene>
+<script>
+      AFRAME.registerComponent('overlay-visibility', {
+        init: function () {
+          if (!this.el.isMobile) {
+            document.querySelector('#about').style.display = 'block';
+          }
+        }
+      });
+
+     // $("#score").setAttribute("text","value","hits "+score);
+      var timer2 = "0:10";
+      var interval = setInterval(function() {
+
+
+        var timer = timer2.split(':');
+        //by parsing integer, I avoid all extra string processing
+        var minutes = parseInt(timer[0], 10);
+        var seconds = parseInt(timer[1], 10);
+        --seconds;
+        minutes = (seconds < 0) ? --minutes : minutes;
+        if (minutes < 0) clearInterval(interval);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        //minutes = (minutes < 10) ?  minutes : minutes;
+        $('#test').html(minutes + ':' + seconds);
+        timer2 = minutes + ':' + seconds;
+        if(minutes <= 0 && seconds<= 0)
+        $(location).attr('href', 'score.html')
+      }, 1000);
+</script>
 
 </body>
 </html>
