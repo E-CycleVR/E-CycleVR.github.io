@@ -10,8 +10,9 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    
+
         <script>
         AFRAME.registerComponent("car", {
         init: function() {
@@ -70,12 +71,18 @@
 
 </head>
 <body>
-<div id="about">
+  <div id="about">
 
-      <b>ICT2X01 VR prototype environment</b>
-      <p>Welcome to Team 16 VR prototype environment, please free feel to explore the environment</p>
+    <b>Your score: 0</b>
+    <p>Mistakes made: None</p>
 
- </div>
+
+   </div>
+   <div id="about2">
+
+   <p id ="test"></p>
+
+  </div>
 <script>
       AFRAME.registerComponent('overlay-visibility', {
         init: function () {
@@ -179,5 +186,28 @@
 </a-gui-flex-container>
 
 </a-scene>
+<script>
+
+     // $("#score").setAttribute("text","value","hits "+score);
+      var timer2 = "10:01";
+      var interval = setInterval(function() {
+
+
+        var timer = timer2.split(':');
+        //by parsing integer, I avoid all extra string processing
+        var minutes = parseInt(timer[0], 10);
+        var seconds = parseInt(timer[1], 10);
+        --seconds;
+        minutes = (seconds < 0) ? --minutes : minutes;
+        if (minutes < 0) clearInterval(interval);
+        seconds = (seconds < 0) ? 59 : seconds;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+        //minutes = (minutes < 10) ?  minutes : minutes;
+        $('#test').html(minutes + ':' + seconds);
+        timer2 = minutes + ':' + seconds;
+        if(minutes <= 0 && seconds<= 0)
+        $(location).attr('href', 'score.html')
+      }, 1000);
+</script>
 </body>
 </html>
