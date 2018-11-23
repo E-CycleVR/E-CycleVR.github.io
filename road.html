@@ -9,7 +9,7 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script> -->
     <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
@@ -101,21 +101,29 @@
 
   <b>Your score: 0</b>
   <p>Mistakes made: None</p>
-  <p id ="test"></p>
+ 
 
  </div>
 
+  <div id="about2">
+
+  <p id ="test"></p>
+
+ </div>
  <body>
-<div id="about2">
 
-  <p id ="test"></p>
-
- </div>
 <script>
       AFRAME.registerComponent('overlay-visibility', {
         init: function () {
           if (!this.el.isMobile) {
             document.querySelector('#about').style.display = 'block';
+          }
+        }
+      });
+      AFRAME.registerComponent('overlay-visibility', {
+        init: function () {
+          if (!this.el.isMobile) {
+            document.querySelector('#about2').style.display = 'block';
           }
         }
       });
