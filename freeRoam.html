@@ -34,40 +34,58 @@
         }
         })
         </script>
- <style>
-  #about {
-        display: none;
-        position: absolute;
-        z-index: 7001;
-        width: 300px;
-        top: 40px;
-        left: 40px;
-        font: 14px 'Voces', Arial, sans-serif;
-        color: white;
-        line-height: 1.3rem;
-        background: rgba(0,0,0,0.2);
-        padding: 1rem;
-        box-sizing: border-box;
-		display: block;
-      }
+        <style>
+         #about {
+               display: none;
+               position: absolute;
+               z-index: 7001;
+               width: 300px;
+               top: 40px;
+               left: 40px;
+               font: 14px 'Voces', Arial, sans-serif;
+               color: white;
+               line-height: 1.3rem;
+               background: rgba(0,0,0,0.2);
+               padding: 1rem;
+               box-sizing: border-box;
+       		display: block;
+             }
 
-	   #about p:last-child{
-        margin: 0;
-      }
+       	   #about #about2 p:last-child{
+               margin: 0;
+             }
 
-	  #about b{
-          font-weight: bold;
-          font-family: monospace;
-      }
+       	  #about #about2 b{
+                 font-weight: bold;
+                 font-family: monospace;
+             }
 
-	  @media (max-width: 400px), (max-height: 300px) {
-      #about {
-        left: 5%;
-        top: 5%;
-        width: 90%;
-      }
-	  }
-</style>
+       	  @media (max-width: 400px), (max-height: 300px) {
+             #about #about2 {
+               left: 5%;
+               top: 5%;
+               width: 90%;
+             }
+       	  }
+
+           #about2 {
+               display: none;
+               position: absolute;
+               z-index: 7001;
+               width: 300px;
+               top: 40px;
+               right: 40px;
+               font: 14px 'Voces', Arial, sans-serif;
+               color: white;
+               line-height: 1.3rem;
+               background: rgba(0,0,0,0.2);
+               padding: 1rem;
+               box-sizing: border-box;
+           display: block;
+
+             }
+
+       </style>
 
 </head>
 <body>
@@ -83,6 +101,7 @@
    <p id ="test"></p>
 
   </div>
+  <body>
 <script>
       AFRAME.registerComponent('overlay-visibility', {
         init: function () {
@@ -171,19 +190,6 @@
 <a-entity ply-model="src:model/human.ply" position="91.317 -3.329 286.773" scale="0.4 0.4 0.4" rotation="-90 90 0">
   <a-animation attribute="position" from="91.317 -3.329 286.773" to="200.317 -3.329 286.773" dur="10000" repeat="indefinite"></a-animation>
 </a-entity>
-<a-gui-flex-container
-  flex-direction="column" justify-content="left" component-padding="0.1"
-  opacity="0.7" width="3.5" height="4.5"
-  position="-2 2.5 -4" rotation="0 0 0"
->
-<a-gui-button
-  width="1.0" height="0.5"
-  onclick="window.location.href='index.html'"
-  value="Back"
-  font-family="Arial"
-  margin="0 0 0.05 0"
->
-</a-gui-flex-container>
 
 </a-scene>
 <script>

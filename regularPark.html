@@ -33,41 +33,58 @@
     }
     })
     </script>
- <style>
+    <style>
+     #about {
+           display: none;
+           position: absolute;
+           z-index: 7001;
+           width: 300px;
+           top: 40px;
+           left: 40px;
+           font: 14px 'Voces', Arial, sans-serif;
+           color: white;
+           line-height: 1.3rem;
+           background: rgba(0,0,0,0.2);
+           padding: 1rem;
+           box-sizing: border-box;
+   		display: block;
+         }
 
-  #about {
-        display: none;
-        position: absolute;
-        z-index: 7001;
-        width: 300px;
-        top: 40px;
-        left: 40px;
-        font: 14px 'Voces', Arial, sans-serif;
-        color: white;
-        line-height: 1.3rem;
-        background: rgba(0,0,0,0.2);
-        padding: 1rem;
-        box-sizing: border-box;
-		display: block;
-      }
+   	   #about #about2 p:last-child{
+           margin: 0;
+         }
 
-	   #about p:last-child{
-        margin: 0;
-      }
+   	  #about #about2 b{
+             font-weight: bold;
+             font-family: monospace;
+         }
 
-	  #about b{
-          font-weight: bold;
-          font-family: monospace;
-      }
+   	  @media (max-width: 400px), (max-height: 300px) {
+         #about #about2 {
+           left: 5%;
+           top: 5%;
+           width: 90%;
+         }
+   	  }
 
-	  @media (max-width: 400px), (max-height: 300px) {
-      #about {
-        left: 5%;
-        top: 5%;
-        width: 90%;
-      }
-	  }
-</style>
+       #about2 {
+           display: none;
+           position: absolute;
+           z-index: 7001;
+           width: 300px;
+           top: 40px;
+           right: 40px;
+           font: 14px 'Voces', Arial, sans-serif;
+           color: white;
+           line-height: 1.3rem;
+           background: rgba(0,0,0,0.2);
+           padding: 1rem;
+           box-sizing: border-box;
+       display: block;
+
+         }
+
+   </style>
 
 </head>
 <body>
