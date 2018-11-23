@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ICT2X01 VR Environment</title>
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script>
+    AFRAME.registerComponent("car", {
+    init: function() {
+    this.el.setAttribute("visible", localStorage.getItem("carVisibility"))
+    }
+    })
+    </script>
+    <script>
+    AFRAME.registerComponent("sky", {
+    init: function() {
+    this.el.setAttribute("material", localStorage.getItem("colorSetting"))
+    }
+    })
+    </script>
+    <script>
+    AFRAME.registerComponent("person", {
+    init: function() {
+    this.el.setAttribute("visible", localStorage.getItem("personVisibility"))
+    }
+    })
+    </script>
+ <style>
+
+  #about {
+        display: none;
+        position: absolute;
+        z-index: 7001;
+        width: 300px;
+        top: 40px;
+        left: 40px;
+        font: 14px 'Voces', Arial, sans-serif;
+        color: white;
+        line-height: 1.3rem;
+        background: rgba(0,0,0,0.2);
+        padding: 1rem;
+        box-sizing: border-box;
+		display: block;
+      }
+
+	   #about p:last-child{
+        margin: 0;
+      }
+
+	  #about b{
+          font-weight: bold;
+          font-family: monospace;
+      }
+
+	  @media (max-width: 400px), (max-height: 300px) {
+      #about {
+        left: 5%;
+        top: 5%;
+        width: 90%;
+      }
+	  }
+</style>
+
+</head>
+<body>
+<div id="about">
+
+      <b>ICT2X01 VR prototype environment</b>
+      <p>Welcome to Team 16 VR prototype environment, please free feel to explore the environment</p>
+
+ </div>
+<script>
+      AFRAME.registerComponent('overlay-visibility', {
+        init: function () {
+          if (!this.el.isMobile) {
+            document.querySelector('#about').style.display = 'block';
+          }
+        }
+      });
+</script>
+<a-scene>
+  <a-assets>
+    <img id="ground" src="assets/floor.jpg">
+      	<img id="grass" src="assets/grass.jpg">
+        <img id="redroad" src="assets/redroad.png">
+        <img id="tree" src="assets/tree.png">
+
+
+        <a-asset-item id="cycle_obj" src="model/cycle03/bicycle.obj"></a-assert-item>
+    	  <a-asset-item id="cycle_mtl" src="model/cycle03/bicycle.mtl"></a-assert-item>
+        <a-asset-item id="ParkingLot_obj" src="model/ParkingLot/ParkingLot.obj"></a-assert-item>
+        <a-asset-item id="ParkingLot_mtl" src="model/ParkingLot/ParkingLot.mtl"></a-assert-item>
+
+	</a-assets>
+  <!-- <a-entity environment="preset: forest" preset-switcher id="environment"></a-entity> -->
+
+    <!--Camera View-->
+	<a-entity camera="" look-controls wasd-controls="acceleration: 200" position="-7.792 1.805 409.468">
+
+	<<a-obj-model src="#cycle_obj" mtl="#cycle_mtl" rotation="-360 -180 360" scale="0.1 0.1 0.1" position="0.118 -2.026 -0.288" material=""></a-obj-model>
+	</a-entity>
+
+	<!--car object code-->
+  <a-sky src="#sky" rotation ="" sky></a-sky>
+
+
+	<!--Code for the road-->
+	<a-plane position="0 0 -4" repeat="1 19" src="#ground" height="350" width="10" rotation="-90 0 0"></a-plane>
+
+  <!--code for the left side grass-->
+  <a-plane position="20 0 -4" repeat="1 19" src="#grass" height="350" width="10" rotation="-90 0 0"></a-plane>
+  <!--code for the right side grass-->
+  <a-plane position=" -10 0  -4" repeat="1 19" src="#grass" height="350" width="10" rotation="-90 0 0"></a-plane>
+  <a-plane position="10 0 -4" repeat="1 19" src="#redroad" height="350" width="10" rotation="-90 0 0"></a-plane>
+
+<a-box position="392.927 73 356.005" src="#tree" depth="360" height="150" width="0.5" geometry="depth:400"></a-box>
+<a-box position="186.523 69.302 559.579" src="#tree" depth="360" height="150" width="0.5" geometry="depth:410" rotation="0 90 0"></a-box>
+<a-box position="-14.6 73 371.957" src="#tree" depth="360" height="150" width="0.5" geometry="depth:400"></a-box>
+<a-box position="-14.6 73 -9.968" src="#tree" depth="360" height="150" width="0.5" material="" geometry=""></a-box>
+<a-box position="7.857 73 -182.23" src="#tree" depth="360" height="150" width="0.5" rotation="0 90 0" geometry="depth:50"></a-box>
+<a-box position="25 73 -10.781" src="#tree" depth="360" height="150" width="0.5" geometry="depth:350"></a-box>
+<a-box position="215.962 69.302 164.191" src="#tree" depth="360" height="150" width="0.5" geometry="depth:380" rotation="0 90 0"></a-box>
+
+  <a-entity>
+<a-obj-model src="#cycle_obj" mtl="#cycle_mtl" position="5.64 0 7" scale="0.1 0.1 0.1" material=""></a-obj-model>
+ <a-animation attribute="position" from="2 0 -100" to="2 0 6" repeat="indefinite" dur="15000"></a-animation>
+ </a-entity>
+<a-entity ply-model="src:model/human2.ply" position="-4.266 0 264.633" scale="0.2 0.2 0.2" rotation="-90 0 0" person>
+  <a-animation attribute="position" from="-4.266 0 264.63" to="-4.266 0 378.282" dur="20000" repeat="indefinite"></a-animation>
+</a-entity>
+<a-entity ply-model="src:model/human3.ply" position="5.604 0 264.633" scale="0.2 0.2 0.2" rotation="-90 0 0" person>
+    <a-animation attribute="position" from="-5.604 0 264.633" to="-5.604 0 384.220" dur="20000" repeat="indefinite"></a-animation>
+</a-entity>
+<a-entity>
+  <a-obj-model src="#ParkingLot_obj" mtl="#ParkingLot_mtl" position="202.378 -6.328 368.135" scale="100 100 100" material=""></a-obj-model>
+</a-entity>
+</a-scene>
+
+</body>
+</html>
