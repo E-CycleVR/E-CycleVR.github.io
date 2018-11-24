@@ -47,6 +47,21 @@ To edit the environment settings in the VR application so that users can adapt t
 
 
 ## FAQ
+#### Can the game be played in multiplayer mode?
+At the time of writing, the game only supports single player mode.
+
+#### What platforms can the game be played on?
+Most phones, tablets and computers that have a browser installed should be compatible.
+
+#### Is the game free to play?
+At the time of writing, the game is free to play.
+
+#### Why should I use E-Cycle VR?
+E-Cycle VR is fuss-free and easily accessible as long as you have a mobile device. The application promotes safe cycling habits to reduce road accidents.
+
+#### How do I start using E-Cycle VR?
+Simple type in https://e-cyclevr.github.io/index.html into your device's browser and start using the application.
+
 
 ## Gameplay Video
 
