@@ -49,3 +49,7 @@ To start the game:
 
 ## FAQ
 
+## Gameplay Video
+
+[View video on YouTube](https://www.youtube.com/watch?v=Xm-RUG43riA)
+
