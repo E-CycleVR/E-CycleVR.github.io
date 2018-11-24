@@ -16,13 +16,15 @@ This document serves as a readme that contains installation and set up instructi
 Steps for running the VR Project:
 1. Run Chrome browser or similar brower with webVR capability
 2. Go to https://e-cyclevr.github.io.
-3. Use a VR headset for maximum compatibility
+    - Use a VR headset for maximum compatibility
 
 Alternatively, if running on local computer:
-1. Start the apache web server in XAMPP
-2. Download or clone the file to local computer XAMPP/htdocs folder
-3. Open a chrome web browser and type in 127.0.0.1/index.html
-4. Interact with VR
+1. Clone the repo
+2. Start the apache web server in XAMPP
+3. Move the E-CycleVR.github.io folder to XAMPP/htdocs folder
+4. Open a Chrome web browser `localhost/E-CycleVR.github.io/index.html`
+    - or Mobile browser and type in your IP address `192.168.1.xx/E-CycleVR.github.io/index.html`
+      - Use a VR headset for Maximum compatibility
 
 ## Gameplay: 
 To start the game:
