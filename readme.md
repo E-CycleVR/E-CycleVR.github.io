@@ -16,7 +16,7 @@ This document serves as a readme that contains installation and set up instructi
 Steps for running the VR Project:
 1. Run Chrome browser or similar brower with webVR capability
 2. Go to https://e-cyclevr.github.io.
-2.1 Use a VR headset for maximum compatibility
+3. Use a VR headset for maximum compatibility
 
 Alternatively, if running on local computer:
 1. Start the apache web server in XAMPP
