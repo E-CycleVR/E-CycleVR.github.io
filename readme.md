@@ -1,4 +1,4 @@
-## E-Cycle VR
+## Introduction
 E-Cycle VR (Virtual Reality) aims to provide a simulated experience for everyone, especially  cyclists and personal mobility device (PMD) users in the world of virtual reality. By using our application, road users would learn to practice safe riding habits and be deterred from reckless riding and/or violating traffic offences. Players will be informed of the mistakes they have committed and what they could have done to prevent the same incident from happening again. 
 
 ## Overview
