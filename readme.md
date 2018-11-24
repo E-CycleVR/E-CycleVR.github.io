@@ -4,6 +4,13 @@ E-Cycle VR (Virtual Reality) aims to provide a simulated experience for everyone
 ## Overview
 This document serves as a readme that contains installation and set up instructions for users and administrators to understand how they can interact with the application. 
 
+## Authors
+1. Muhammad Hadee [@madhadee](https://github.com/madhadee)
+2. Ng Wei Da Jim [@iNeedToProgramBetter](https://github.com/iNeedToProgramBetter)
+3. Ng Jin Lin Jesslyn [@jsweetheartxoxo](https://github.com/jsweetheartxoxo)
+4. Leon Tan [@leontxh](https://github.com/leontxh)
+5. Sheng Yang [@Alenharto](https://github.com/Alenharto)
+
 ## Installation 
 Requisites are:
 1. XAMPP or similar installed
@@ -38,3 +45,7 @@ To start the game:
 
 
 ![how to select game](https://user-images.githubusercontent.com/31891072/48964237-0b876180-efde-11e8-94dc-273e38590a99.gif)
+
+
+## FAQ
+
