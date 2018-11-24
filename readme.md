@@ -51,7 +51,7 @@ To edit the environment settings in the VR application so that users can adapt t
 At the time of writing, the game only supports single player mode.
 
 #### What platforms can the game be played on?
-Most phones, tablets and computers that have a browser installed should be compatible.
+Most mobile phones with webVR capability will be able to support it, as well as desktop browsers with webVR capability.
 
 #### Is the game free to play?
 At the time of writing, the game is free to play.
